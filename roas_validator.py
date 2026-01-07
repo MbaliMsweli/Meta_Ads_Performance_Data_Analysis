@@ -126,5 +126,5 @@ summary_df.to_csv(
     index=False
 )
 
-print("\nROAS summary saved to output folder")
+print("\nROAS summary created")
 
