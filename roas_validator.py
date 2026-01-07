@@ -1,10 +1,10 @@
 import pandas as pd
 
 #Read WooCommerce CSV
-website_df = pd.read_csv("woocommerce_novdec2025.csv")
+website_df = pd.read_csv("Meta_Ads_Performance_Data_Analysis/woocommerce_novdec2025.csv")
 
 #Read Meta Ads CSV
-meta_df = pd.read_csv("meta_ads-novdec2025.csv")
+meta_df = pd.read_csv("Meta_Ads_Performance_Data_Analysis/meta_ads-novdec2025.csv")
 
 #Print first 5 rows (check data loaded)
 print(website_df.head())
@@ -102,29 +102,19 @@ print("Meta ROAS:", round(meta_roas, 2))
 print("ROAS difference:", round(roas_difference, 2))
 
 #EXPORT A REPORT
-summary_df = pd.DataFrame({
-    "Metric": [
-        "Website Revenue",
-        "Meta Reported Revenue",
-        "Total Ad Spend",
-        "Website ROAS",
-        "Meta ROAS",
-        "ROAS Difference"
-    ],
-    "Value": [
-        website_revenue,
-        meta_reported_revenue,
-        total_spend,
-        website_roas,
-        meta_roas,
-        roas_difference
-    ]
-})
+final_report_df = pd.DataFrame([{
+    "period": "Nov–Dec 2025",
+    "website_revenue": round(website_revenue, 2),
+    "meta_reported_revenue": round(meta_reported_revenue, 2),
+    "total_ad_spend": round(total_spend, 2),
+    "website_roas": round(website_roas, 2),
+    "meta_roas": round(meta_roas, 2),
+    "roas_difference": round(roas_difference, 2)
+}])
 
-summary_df.to_csv(
-    "roas_summary_nov_dec_2025.csv",
+final_report_df.to_csv(
+    "roas_summary_for_report.csv",
     index=False
 )
 
-print("\nROAS summary created")
-
+print("\nROAS report created")
