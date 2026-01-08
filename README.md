@@ -8,7 +8,7 @@ Instead of relying solely on Ads Manager dashboards, the analysis calculates tru
 
 # What This Project Does
 
-Loads Meta Ads and WooCommerce order data
+Loads Meta Ads and WooCommerce data
 
 Cleans and validates data (dates, revenue, order status)
 
