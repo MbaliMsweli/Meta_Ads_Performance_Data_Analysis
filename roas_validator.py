@@ -1,10 +1,10 @@
 import pandas as pd
 
 #Read WooCommerce CSV
-website_df = pd.read_csv("woocommerce_novdec2025.csv")
+website_df = pd.read_csv("csv_files/woocommerce_novdec2025.csv")
 
 #Read Meta Ads CSV
-meta_df = pd.read_csv("meta_ads-novdec2025.csv")
+meta_df = pd.read_csv("csv_files/meta_ads-novdec2025.csv")
 
 #Print first 5 rows (check data loaded)
 print(website_df.head())
